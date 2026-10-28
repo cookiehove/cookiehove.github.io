@@ -1659,8 +1659,7 @@ html:not(.js) .nav-toggle {
 
 @media (min-width: 62rem) {
   .trust__grid {
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-    gap: 2.5rem 3rem;
+    gap: 3rem;
   }
 
   .trust__stack {
@@ -1669,10 +1668,23 @@ html:not(.js) .nav-toggle {
     align-content: start;
   }
 
-  .trust__group--wide,
-  .trust__grid--single .assurance {
-    grid-column: 1 / -1;
+  .trust__items--logos {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
+
+  /* the insurance panel: the message on the left, the coverage lines on the right */
+  .assurance--wide {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 2rem 4rem;
+    align-items: start;
+  }
+}
+
+.assurance__intro,
+.assurance__details {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
 }
 
 .trust__stack {
